@@ -23,7 +23,7 @@ def update_file_excel(data):
                 }
                 response = requests.request("PUT", url, headers=headers, data=payload, files=files)
                 print(response.text)
-        print('Excel update cycle complete')
+        print('Excel update cycle complete\n')
         time.sleep(30)
 
 
@@ -42,7 +42,7 @@ def update_file_qvd(data):
                 }
                 response = requests.request("PUT", url, headers=headers, data=payload, files=files)
                 print(response.text)
-        print('QVD update cycle complete')
+        print('QVD update cycle complete\n')
         time.sleep(30)
 
 
@@ -89,9 +89,9 @@ def data_maint():
                 qvdStore[i] = dataStore[i]
             else:
                 excelStore[i] = dataStore[i]
-        print(qvdStore)
+        print('QVD: ', qvdStore)
         print('_________________')
-        print(excelStore)
+        print('Spreadsheet: ', excelStore)
         time.sleep(30)
 
 
